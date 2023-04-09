@@ -1,0 +1,38 @@
+{
+  "name": "court_case_mongodb",
+  "version": "1.0.0",
+  "description": "A court case management website",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HarshKapadia2/court_case_management_web_app.git"
+  },
+  "author": "Harsh Kapadia",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HarshKapadia2/court_case_management_web_app/issues"
+  },
+  "homepage": "https://github.com/HarshKapadia2/court_case_management_web_app#readme",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "connect-flash": "^0.1.1",
+    "dotenv": "^16.0.3",
+    "ejs": "^3.1.2",
+    "express": "^4.17.1",
+    "express-ejs-layouts": "^2.5.0",
+    "express-flash": "0.0.2",
+    "express-session": "^1.17.1",
+    "mongodb": "^5.2.0",
+    "mongoose": "^5.9.11",
+    "passport": "^0.4.1",
+    "passport-local": "^1.0.0",
+    "socket.io": "^2.4.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.3"
+  }
+}

@@ -1,0 +1,59 @@
+<%- include('./partials/header.ejs')%>
+
+<center>
+    <h2><i class="fa fa-user-plus" style="font-size:32px"></i> Government Employee Registration</h2>
+</center>
+
+<%- include('./partials/messages.ejs') %>
+<form action="/govEmp/register" method="POST">
+    <div class="container">
+
+        <label for="name"><b>Name</b></label>
+        <input type="text" placeholder="Enter Name" name="name" required>
+
+        <label for="email"><b>E-mail</b></label>
+        <input type="email" placeholder="Enter Email" name="email" required>
+
+        <label for="Governmentid"><b>Government-id</b></label>
+        <input type="text" placeholder="Enter bar council id" name="Governmentid" required>
+
+        <br>
+        <label for="gender"><b>Gender</b></label> Male:
+        <input type="radio" placeholder="Select your gender" name="gender" value="male">
+        Female:
+        <input type="radio" placeholder="Select your gender" name="gender" value="female">
+        <br>
+
+        <label for="adhaar_id"><b>Adhaar-id</b></label>
+        <input type="text" placeholder="Enter adhaar id" name="adhaar_id" required>
+        <br>
+
+        <label for="dob"><b>Date of birth</b></label>
+        <input type="date" placeholder="Enter date of birth" name="dob" required>
+        <br>
+
+        <label for="age"><b>Age</b></label>
+        <input type="number" placeholder="Enter your age" name="age" required>
+        <br>
+
+        <label for="ph_no"><b>Phone number</b></label>
+        <input type="number" placeholder="Enter your phone number" name="ph_no" required>
+        <br>
+
+        <label for="password"><b>Password</b></label>
+        <input type="password" placeholder="Enter Password" name="password" required>
+
+        <label for="password2"><b>Repeat Password</b></label>
+        <input type="password" placeholder="Repeat Password" name="password2" required>
+
+        <button type="submit" class="button">Register</button>
+
+    </div>
+</form>
+<form action="/" method="GET">
+    <div class="container" style="background-color:#f1f1f1">
+        <button type="submit" class="cancelbtn">Back</button>
+    </div>
+</form>
+
+<%- include('./partials/footer.ejs')%>

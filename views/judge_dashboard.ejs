@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Government Side</title>
+    <style>
+        /* Navbar styles */
+        .navbar {
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            margin-top: 1.3%;
+            /* width: 98%; */
+            margin-left: 1.3%;
+            margin-right: 1.3%;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            color: black;
+        }
+
+        .form-container {
+            background-color: rgba(0, 0, 0, 1);
+            color: white;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        .form-row {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+
+        label {
+            margin-right: 10px;
+            width: 150px;
+        }
+
+        input[type="text"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 8px;
+            border: none;
+            border-radius: 4px;
+            background-color: white;
+        }
+
+        input[type="radio"] {
+            margin-right: 10px;
+        }
+
+        button[type="submit"] {
+            background-color: white;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+<nav class="navbar">
+    <h1><a href="#">LegalLens</a></h1>
+</nav>
+<div class="form-container">
+    <form method="post" action="/judge/update">
+
+        <div class="form-row">
+            <label for="case-id">Case ID:</label>
+            <input type="text" id="case-id" name="case-id" placeholder="Enter case ID" required>
+        </div>
+
+        <div class="form-row">
+            <label for="case-resolved">Case Resolved:</label>
+            <label><input type="radio" name="case-resolved" value="yes"> Yes</label>
+            <label><input type="radio" name="case-resolved" value="no"> No</label>
+        </div>
+        <div class="form-row">
+            <label for="hearing-date">Hearing Date:</label>
+            <input type="date" id="hearing-date" name="hearing-date" required>
+        </div>
+
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
+</body>
+
+</html>

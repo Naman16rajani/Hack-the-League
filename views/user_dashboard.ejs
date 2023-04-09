@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>LegalLens</title>
+    <style>   /* Navbar styles */
+        .navbar {
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            margin-top: -1%;
+            /* width: 98%; */
+            margin-left: -1%;
+            margin-right: -1%;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .navbar a:hover {
+            color: black;
+        }
+
+        .logout-btn {
+            background-color: white;
+            color: black;
+            padding: 8px 16px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        .logout-btn:hover {
+            background-color: black;
+            color: white;
+        }
+
+        table {
+            margin: auto;
+            padding: 10px;
+            border-collapse: collapse;
+            width: 80%;
+            margin-top: 2%;
+            box-shadow: inset;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: black;
+            color: white;
+        }
+        tr
+        {
+            border-bottom: 1px solid #ddd;
+
+        }
+
+    </style>
+</head>
+
+<body>
+<nav class="navbar">
+    <h1><a href="#">LegalLens</a></h1>
+    <button class="logout-btn">Logout</button>
+</nav>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Total Hearings</th>
+        <th>Winning Lawyer</th>
+        <th>Punishment Details</th>
+        <th>Judge</th>
+        <th>Case ID</th>
+        <th>Lawyer Prosecutor</th>
+        <th>Lawyer Defendant</th>
+        <th>Case Resolved</th>
+        <th>Hearing Date</th>
+        <th>Case Type</th>
+        <th>Case Description</th>
+    </tr>
+    <% cases.forEach((cas)=>{ %>
+        <tr>
+            <td><%cas._id%></td>
+            <td><%cas.total_hearings%></td>
+            <td><%cas.winning_lawyer%></td>
+            <td><%cas.punishment_details%></td>
+            <td><%cas.judge%> </td>
+            <td><%cas.case_id%></td>
+            <td><%cas.lawyer_prosecutor%></td>
+            <td><%cas.lawyer_defendent%></td>
+            <td><%cas.isResolved%></td>
+            <td><%cas.h_date%></td>
+            <td><%cas.case_type%></td>
+            <td><%cas.case_descp%></td>
+        </tr>
+    <% })%>
+
+    <tr>
+        <td>2</td>
+        <td>3</td>
+        <td>Sara Lee</td>
+        <td>Community Service</td>
+        <td>Judge Johnson</td>
+        <td>2021-002</td>
+        <td>Mike Johnson</td>
+        <td>Amy White</td>
+        <td>No</td>
+        <td>2022-02-05</td>
+        <td>Criminal</td>
+        <td>Theft of property</td>
+    </tr>
+    <!-- add more rows as needed -->
+</table>
+</body>
+
+</html>
+

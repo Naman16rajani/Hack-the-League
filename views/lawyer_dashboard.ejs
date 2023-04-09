@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Lawyer Dashboard</title>
+</head>
+<body>
+<h1>Welcome, <%= lawyer.lawyer_name %>!</h1>
+<p>Total Number of Cases: <%= totalCases %></p>
+<p>Total Number of Winning Cases: <%= totalWins %></p>
+<p>Total Number of Losing Cases: <%= totalLosses %></p>
+<h2>Case History</h2>
+<table>
+    <thead>
+    <tr>
+        <th>Case ID</th>
+        <th>Case Name</th>
+        <th>Case Description</th>
+        <th>Case Type</th>
+        <th>Court Type</th>
+        <th>Total Hearings</th>
+        <th>Winning Lawyer</th>
+        <th>Prosecutor Lawyer</th>
+        <th>Defendant Lawyer</th>
+        <th>Punishment Details</th>
+        <th>Judge</th>
+        <th>Case Resolved?</th>
+        <th>Hearing Date</th>
+    </tr>
+    </thead>
+    <tbody>
+    <% cases.forEach(function(cas) { %>
+    <tr>
+        <td><%= cas.case_id %></td>
+        <td><%= cas.case_name %></td>
+        <td><%= cas.case_descp %></td>
+        <td><%= cas.case_type %></td>
+        <td><%= cas.court_type %></td>
+        <td><%= cas.total_hearings %></td>
+        <td><%= cas.winning_lawyer %></td>
+        <td><%= cas.lawyer_prosecutor %></td>
+        <td><%= cas.lawyer_defendent %></td>
+        <td><%= cas.punishment_details %></td>
+        <td><%= cas.judge %></td>
+        <td><%= cas.isResolved ? 'Yes' : 'No' %></td>
+        <td><%= cas.h_date.toDateString() %></td>
+    </tr>
+    <% }); %>
+    </tbody>
+</table>
+</body>
+</html>
